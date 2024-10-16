@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "target": "ES6",                       /* Usar ECMAScript 6 como objetivo */
+    "module": "ES6",                       /* Usar módulos ES para el front-end */
+    "jsx": "react",                        /* Usar JSX para React */
+    "outDir": "./dist",                    /* Carpeta de salida para archivos compilados */
+    "esModuleInterop": true,               /* Permitir la interoperabilidad con módulos ES */
+    "strict": true,                        /* Habilitar todas las comprobaciones estrictas de TypeScript */
+    "skipLibCheck": true,                  /* Saltar la verificación de archivos .d.ts */
+    "forceConsistentCasingInFileNames": true /* Asegura consistencia en mayúsculas/minúsculas en nombres de archivo */
+  },
+  "include": ["./**/*.ts", "./**/*.tsx"],   /* Incluir todos los archivos TypeScript y JSX */
+  "exclude": ["node_modules", "ts-node-server"] /* Excluir la carpeta de Node.js */
+}

@@ -1,26 +1,31 @@
 {
-  "name": "ts-node-server",
-  "version": "1.0.0",
-  "main": "index.js",
+  "name": "front",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
   "scripts": {
-    "clean": "rimraf ts-node-server/dist",
-    "build": "npm run clean && tsc -p ts-node-server/tsconfig.json",
-    "start": "ts-node ts-node-server/src/server.ts"
+    "dev": "vite", 
+    "build": "vite build", 
+    "serve": "node server/dist/server.js", 
+    "start": "npm run build && npm run serve", 
+    "lint": "eslint .",
+    "preview": "vite preview"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": "",
   "dependencies": {
-    "@types/react": "^18.3.11",
-    "@types/react-dom": "^18.3.1",
-    "express": "^4.21.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
   },
   "devDependencies": {
-    "@types/express": "^5.0.0",
-    "ts-node": "^10.9.2",
-    "typescript": "^5.6.3"
+    "@eslint/js": "^9.11.1",
+    "@types/react": "^18.3.10",
+    "@types/react-dom": "^18.3.0",
+    "@vitejs/plugin-react": "^4.3.2",
+    "eslint": "^9.11.1",
+    "eslint-plugin-react-hooks": "^5.1.0-rc.0",
+    "eslint-plugin-react-refresh": "^0.4.12",
+    "globals": "^15.9.0",
+    "typescript": "^5.5.3",
+    "typescript-eslint": "^8.7.0",
+    "vite": "^5.4.8"
   }
 }

@@ -8,7 +8,7 @@ function App() {
 
   return (
     <>
-      <h1>PRIMER CAMBIO</h1>
+      <h1>CAMBIO SIN BUILD</h1>
       <div>
         <a href="https://vitejs.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />

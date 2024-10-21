@@ -1,17 +1,25 @@
-import express from 'express';
-import path from 'path';
+import express, { Application } from 'express';
+import cors from 'cors';
+import dotenv from 'dotenv';
+import exampleRoutes from './routes/routes';
 
-const app = express();
-const port = 3000;
+// Cargar las variables de entorno
+dotenv.config();
 
-// Configurar la carpeta "dist" de Vite para servir los archivos estáticos
-app.use(express.static(path.join(__dirname, '../../dist')));
+const app: Application = express();
+const PORT = process.env.PORT || 5000;
 
-// Para cualquier otra ruta, devolver el index.html de Vite
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, '../../dist/index.html'));
+// Middlewares
+app.use(cors());
+app.use(express.json());
+app.use('/api', exampleRoutes);
+
+// Rutas (Ejemplo básico)
+app.get('/', (req, res) => {
+    res.send('Hello, world!');
 });
 
-app.listen(port, () => {
-  console.log(`Servidor escuchando en http://localhost:${port}`);
+// Iniciar el servidor
+app.listen(PORT, () => {
+    console.log(`Server is running on port ${PORT}`);
 });

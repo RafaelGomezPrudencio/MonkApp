@@ -1,4 +1,5 @@
 {
+  "extends": "./base.json", // Ajusta este path al que corresponda en tu repositorio
   "compilerOptions": {
     "target": "es6",
     "module": "commonjs",
@@ -7,8 +8,11 @@
     "outDir": "./dist",
     "rootDir": "./src",
     "resolveJsonModule": true,
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "incremental": true, // Habilita compilaciones incrementales
+    "tsBuildInfoFile": "node_modules/.cache/tsbuildinfo.json", // Archivo para guardar la información de compilación incremental
+    "noUncheckedIndexedAccess": true // Mejora la seguridad de los índices
   },
   "include": ["src/**/*.ts"],
-  "exclude": ["node_modules"]
+  "exclude": ["node_modules", "dist"]
 }

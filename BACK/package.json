@@ -4,7 +4,7 @@
   "main": "index.js",
   "scripts": {
     "build": "tsc && cpx \"src/public/**/*\" public",
-    "start": "node dist/server.js",
+    "start": "node public/server.js",
     "dev": "nodemon src/server.ts",
     "type-check": "npx tsc -p tsconfig.json --noEmit"
   },

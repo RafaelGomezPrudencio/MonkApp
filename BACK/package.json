@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "build": "tsc && copyfiles -u 1 \"src/public/**/*\" dist/public",
+    "build": "tsc",
     "start": "node dist/server.js",
     "dev": "nodemon src/server.ts",
     "type-check": "npx tsc -p tsconfig.json --noEmit"

@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
+    "build": "tsc && copyfiles -u 1 \"src/public/**/*\" dist/public",
     "start": "node dist/server.js",
     "dev": "nodemon src/server.ts",
-    "build": "tsc && copyfiles -u 1 \"src/public/**/*\" dist/public",
     "type-check": "npx tsc -p tsconfig.json --noEmit"
   },
   "keywords": [],

@@ -6,6 +6,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = __importDefault(require("express"));
 const cors_1 = __importDefault(require("cors"));
 const dotenv_1 = __importDefault(require("dotenv"));
+const path_1 = __importDefault(require("path"));
 const routes_1 = __importDefault(require("./routes/routes"));
 // Cargar las variables de entorno
 dotenv_1.default.config();
@@ -18,6 +19,7 @@ app.use('/api', routes_1.default);
 // Rutas (Ejemplo básico)
 app.get('/', (req, res) => {
     res.send('Hello, world!');
+    res.sendFile(path_1.default.join(__dirname, 'public', 'index.html'));
 });
 // Iniciar el servidor
 app.listen(PORT, () => {

@@ -1,35 +1,11 @@
 {
-    "buildCommand": "next build",
-    "outputDirectory": "dist",
-    "rewrites": [
-      {
-        "source": "/api/(.*)",
-        "destination": "/dist/server.js"
-      }
-    ],
-    "installCommand": "npm install",
-    "images": {
-      "sizes": [256, 640, 1080, 2048, 3840],
-      "localPatterns": [
-        {
-          "pathname": "^/assets/.*$",
-          "search": ""
-        }
-      ],
-      "remotePatterns": [
-        {
-          "protocol": "https",
-          "hostname": "example.com",
-          "port": "",
-          "pathname": "^/account123/.*$",
-          "search": "?v=1"
-        }
-      ],
-      "minimumCacheTTL": 60,
-      "formats": ["image/webp"],
-      "dangerouslyAllowSVG": false,
-      "contentSecurityPolicy": "script-src 'none'; frame-src 'none'; sandbox;",
-      "contentDispositionType": "inline"
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist",
+  "rewrites": [
+    {
+      "source": "/api/(.*)",
+      "destination": "/dist/server.js"
     }
-  }
-  
+  ],
+  "installCommand": "npm install"
+}

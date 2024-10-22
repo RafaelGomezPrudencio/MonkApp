@@ -2,12 +2,12 @@
   "name": "server",
   "version": "1.0.0",
   "main": "index.js",
-    "scripts": {
+  "scripts": {
     "start": "node dist/server.js",
     "dev": "nodemon src/server.ts",
-    "build": "npx tsc",
+    "build": "tsc",
     "type-check": "npx tsc -p tsconfig.json --noEmit"
-  },  
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",

@@ -5,8 +5,8 @@
     "scripts": {
     "start": "node dist/server.js",
     "dev": "nodemon src/server.ts",
-    "build": "tsc && next build",
-    "type-check": "tsc -p tsconfig.json --noEmit"
+    "build": "npx tsc && next build",
+    "type-check": "npx tsc -p tsconfig.json --noEmit"
   },  
   "keywords": [],
   "author": "",

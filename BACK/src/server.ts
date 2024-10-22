@@ -1,6 +1,7 @@
 import express, { Application } from 'express';
 import cors from 'cors';
 import dotenv from 'dotenv';
+import path from 'path';
 import exampleRoutes from './routes/routes';
 
 // Cargar las variables de entorno
@@ -17,6 +18,7 @@ app.use('/api', exampleRoutes);
 // Rutas (Ejemplo básico)
 app.get('/', (req, res) => {
     res.send('Hello, world!');
+    res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
 // Iniciar el servidor

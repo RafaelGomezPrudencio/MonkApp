@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "build": "tsc",
+    "build": "tsc && cpx \"src/public/**/*\" public",
     "start": "node dist/server.js",
     "dev": "nodemon src/server.ts",
     "type-check": "npx tsc -p tsconfig.json --noEmit"
@@ -17,6 +17,7 @@
     "@types/express": "^5.0.0",
     "@types/node": "^22.7.7",
     "copyfiles": "^2.4.1",
+    "cpx": "^1.5.0",
     "nodemon": "^3.1.7",
     "ts-node": "^10.9.2",
     "typescript": "^5.6.3"

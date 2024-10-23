@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "target": "ES6",                      /* Usar ECMAScript 6 como objetivo */
+    "module": "commonjs",                  /* Usar CommonJS como sistema de módulos, recomendado para Node.js */
+    "outDir": "./dist",                    /* Carpeta de salida para los archivos compilados */
+    "esModuleInterop": true,               /* Permitir la interoperabilidad con módulos ES */
+    "strict": true,                        /* Habilitar todas las comprobaciones estrictas de TypeScript */
+    "skipLibCheck": true,                  /* Saltar la verificación de archivos .d.ts */
+    "forceConsistentCasingInFileNames": true /* Asegura consistencia en mayúsculas/minúsculas en nombres de archivo */
+  },
+  "include": ["src/**/*"]                  /* Incluir todos los archivos dentro de 'src' */
+}

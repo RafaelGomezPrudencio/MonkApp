@@ -2,7 +2,10 @@
 
 ├── BACK/                       #   Carpeta del back-end (API con Express)
 │   │                           
-│   ├── public/                 # ** Build del back, se genera la carpeta al ejecutar tsconfig.json. Archivos públicos que recoge Vercel (HTML y api).
+│   ├── public/                 # ** Build del back, se genera la carpeta al ejecutar tsconfig.json. Son los archivos que recoge Vercel (HTML y api).
+│   │   │                       #        ¿Es necesario que la genere yo con npm run build o la genera Vercel automáticamente?
+│   │   │                       #        En local esta carpeta no sirve para nada pues solo ejecuta el servidor, el cual lo coge de src/server.ts con nodemon
+│   │   │ 
 │   │   ├── index.html          #   Página HTML para la interfaz
 │   │   └── server.js           #   Archivo compilado del servidor Express
 │   │
@@ -37,8 +40,6 @@
 │                               #  ** Ejecuta la build.   
 |                               #           (vercel.json => package.json - build - tsc => tsconfig.json)
 |                               #  ** Si no existiera este archivo se supone Vercel tomaría directamente package.json - build
-|
-|
 |
 |
 |

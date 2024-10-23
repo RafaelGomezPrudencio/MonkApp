@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "build": "tsc && cpx \"src/public/**/*\" public",
+    "build": "npm run build:ts && npm run build:copy",
+      "build:ts": "tsc",
+      "build:copy": "cpx \"src/public/**/*\" public",
     "dev": "nodemon src/server.ts",
     "start": "node public/server.js",
     "type-check": "npx tsc -p tsconfig.json --noEmit"

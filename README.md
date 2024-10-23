@@ -1,5 +1,6 @@
 # MonkApp
 
+
 MonkApp/
 ├── FRONT/                      # Carpeta del front-end (React con Vite)
 │   ├── dist/                   # Archivos compilados de Vite para producción
